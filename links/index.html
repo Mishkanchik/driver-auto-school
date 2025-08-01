@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon" />
+    <title>Автошкола Драйвер</title>
+    <link rel="stylesheet" href="/links/reset.css" />
+    <link rel="stylesheet" href="/links/links-style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=Pacifico&family=Tiny5&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="content">
+      <div class="logo">
+        <img
+          src="./image/logo.ico"
+          title="Logo Driver Autoschool"
+          alt="Logo © Driver Autoschool"
+        />
+      </div>
+
+      <p class="description">Твій шлях до впевненого водіння починається тут</p>
+
+      <div class="social-networks">
+        <p class="social-networks-description">
+          Обирай месенджер чи соцмережу - ми завжди на зв’язку
+        </p>
+
+        <a
+          rel="nofollow"
+          target="_blank"
+          title="FaceBook Driver Autoschool"
+          onclick="fbq('track', 'Contact');"
+          href="https://www.facebook.com/driverlutsk"
+        >
+          <div class="img-container">
+            <img
+              src="./image/facebook.png"
+              alt="FaceBook © Driver Autoschool"
+              onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+            />
+          </div>
+        </a>
+
+        <a
+          rel="nofollow"
+          target="_blank"
+          title="Instagram Driver Autoschool"
+          onclick="fbq('track', 'Contact');"
+          href="https://www.instagram.com/driver_autoschool"
+        >
+          <div class="img-container">
+            <img
+              src="./image/Instagram.png"
+              alt="Instagram © Driver Autoschool"
+              onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+            />
+          </div>
+        </a>
+
+        <a
+          rel="nofollow"
+          target="_blank"
+          title="Viber Driver Autoschool"
+          onclick="fbq('track', 'Contact');"
+          href="viber://add?number=380661899977"
+        >
+          <div class="img-container">
+            <img
+              src="./image/viber.png"
+              alt="Viber © Driver Autoschool"
+              onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+            />
+          </div>
+        </a>
+
+        <a
+          rel="nofollow"
+          target="_blank"
+          title="YouTube Driver Autoschool"
+          onclick="fbq('track', 'Contact');"
+          href="https://www.youtube.com/@driverautoschool"
+        >
+          <div class="img-container">
+            <img
+              src="./image/youtube.png"
+              alt="YouTube © Driver Autoschool"
+              onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+            />
+          </div>
+        </a>
+
+        <a
+          rel="nofollow"
+          target="_blank"
+          title="TikTok Driver Autoschool"
+          onclick="fbq('track', 'Contact');"
+          href="https://www.tiktok.com/@driver_autoschool"
+        >
+          <div class="img-container">
+            <img
+              src="./image/tiktok.png"
+              alt="TikTok © Driver Autoschool"
+              onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+            />
+          </div>
+        </a>
+      </div>
+
+      <div class="button_transition">
+        <a
+          class="mg-transition"
+          rel="nofollow"
+          target="_blank"
+          href="https://driver.lutsk.ua/"
+        >
+          <button
+            class="button-29"
+            role="button"
+            rel="nofollow"
+            target="_blank"
+          >
+            Офіційний сайт
+          </button>
+        </a>
+
+        <div class="feedback-box mg-transition">
+          <div class="feedback-title">А тут, що кажуть про нас</div>
+
+          <div class="feedback-buttons">
+            <a class="a-w" href="https://g.page/r/CXD8jBOcaPaAEB0/review">
+              <button>Написати відгук ✏️</button>
+            </a>
+
+            <a
+              class="a-w"
+              href="https://top20.ua/lutsk/obuchenie-kursyi/avtoshkolyi/drayver-avtoshkola.html#"
+            >
+              <button>Прочитати відгуки 📖</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="phone-and-location">
+          <ul class="phone">
+            <li>📞</li>
+            <ul>
+              <li class="phone-and-location-li">+380 66 189 99 77</li>
+              <li class="phone-and-location-li">+380 98 189 99 77</li>
+            </ul>
+          </ul>
+
+          <ul class="location">
+            <li>📍</li>
+            <ul>
+              <li class="phone-and-location-li">Назарія Яремчука,11А</li>
+              <li class="phone-and-location-li">Словацького,12</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const feedbackBox = document.querySelector(".feedback-box");
+
+        const isMobile =
+          window.matchMedia("(max-width: 768px)").matches ||
+          "ontouchstart" in window;
+
+        if (isMobile && feedbackBox) {
+          feedbackBox.addEventListener("click", function () {
+            this.classList.toggle("active");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
