@@ -12,6 +12,10 @@ body {
     margin-bottom: 15px;
 }
 
+.b-r {
+    border-radius: 18px;
+}
+
 /* ==== HEADER above video ==== */
 .header {
     position: absolute;
@@ -213,6 +217,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 4px 8px 17px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 4px 8px 17px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 8px 17px -7px rgba(0, 0, 0, 0.75);
 }
 
 .service-card.expanded {
@@ -292,6 +299,9 @@ body {
     justify-content: center;
     transition: background-color 0.3s ease;
     margin-top: 50px;
+    box-shadow: 1px 4px 28px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 1px 4px 28px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 4px 28px -7px rgba(0, 0, 0, 0.75);
 }
 
 .custom-btn:hover {
@@ -472,6 +482,9 @@ body {
     cursor: pointer;
     border-radius: 20px;
     overflow: hidden;
+    box-shadow: 4px 8px 17px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 4px 8px 17px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 8px 17px -7px rgba(0, 0, 0, 0.75);
 }
 
 .video-container::before {
@@ -531,6 +544,115 @@ body {
     align-items: center;
     gap: 35px;
 }
+
+
+
+
+/* Car Slider */
+.slider-Car {
+    margin-bottom: 100px;
+}
+
+
+
+#car-main-slider {
+    max-width: 1500px;
+    margin: 0 auto 30px auto;
+    box-shadow: 4px 8px 17px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 4px 8px 17px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 8px 17px -7px rgba(0, 0, 0, 0.75);
+}
+
+.car-splide__slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 18px;
+    box-shadow: 4px 8px 17px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 4px 8px 17px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 8px 17px -7px rgba(0, 0, 0, 0.75);
+}
+
+
+.car-thumbnail-slider .car-splide__slide {
+    margin-right: 10px;
+    width: 253px !important;
+    height: 151px !important;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+
+.car-thumbnail-slider .car-splide__slide {
+    opacity: 0.4;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.car-thumbnail-slider .car-splide__slide:hover {
+    opacity: 0.7;
+}
+
+.car-thumbnail-slider .car-splide__slide.is-active {
+    opacity: 1;
+    border: none !important;
+    box-shadow: 4px 8px 17px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 4px 8px 17px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 8px 17px -7px rgba(0, 0, 0, 0.75);
+}
+
+.car-main-slider,
+.car-thumbnail-slider {
+    margin-bottom: 10px;
+}
+
+
+.car-main-slider .splide__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #c341e0;
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.car-main-slider .splide__arrow:hover {
+    background: #7C1593;
+}
+
+.car-main-slider .splide__arrow--prev {
+    left: 20px;
+}
+
+.car-main-slider .splide__arrow--next {
+    right: 20px;
+}
+
+
+.car-thumbnail-slider .splide__arrows {
+    display: none !important;
+}
+
+.splide__arrow svg {
+    width: 1.7em;
+    height: 2.2em;
+
+    fill: #ffffff;
+}
+
 
 /* ==== SCROLL TO TOP ==== */
 .scroll-top {
@@ -609,13 +731,6 @@ body {
 
 
 
-
-
-
-
-
-
-
 /* --- Медіа-запит --- */
 @media (max-width: 768px) {
     .burger {
@@ -676,8 +791,20 @@ body {
         color: white;
         z-index: 1;
         width: 100%;
-        text-align: center;
         padding: 0 15px;
+    }
+
+    .start-page-text .container {
+        max-width: 800px;
+        /* Або як потрібно */
+        margin: 0 auto;
+        text-align: left;
+        /* Тут вирівнюємо текст по лівому краю */
+    }
+
+    .check-icon {
+        width: 30px;
+        height: 30px;
     }
 
     .start-page-text h1 {
@@ -845,6 +972,7 @@ body {
         cursor: pointer;
         border-radius: 20px;
         overflow: hidden;
+
     }
 
     .scroll-top {
@@ -875,12 +1003,61 @@ body {
     }
 
     .meet-description {
-        text-align: center;
+        text-align: left;
         font-size: 18px;
         font-weight: 600;
         color: #000;
     }
 
 
+
+}
+
+
+
+
+@media (max-width: 1200px) {
+    .car-thumbnail-slider .car-splide__slide {
+        width: 200px !important;
+        height: 120px !important;
+    }
+
+    .splide__arrow svg {
+        width: 1.2em;
+        height: 1.2em;
+
+        fill: #ffffff;
+    }
+
+    #car-main-slider {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .car-thumbnail-slider .car-splide__slide {
+        width: 150px !important;
+        height: 90px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .car-thumbnail-slider .car-splide__slide {
+        width: 100px !important;
+        height: 60px !important;
+    }
+
+    .car-main-slider .splide__arrow {
+        width: 30px;
+        height: 30px;
+    }
+
+    .car-main-slider .splide__arrow--prev {
+        left: 10px;
+    }
+
+    .car-main-slider .splide__arrow--next {
+        right: 10px;
+    }
 
 }

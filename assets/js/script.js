@@ -39,6 +39,46 @@ function updateZIndexes(swiper) {
 
     swiper.slides[swiper.activeIndex].classList.add('is-active');
 }
+
+
+// Car Slider
+
+document.addEventListener('DOMContentLoaded', function () {
+    var main = new Splide('#car-main-slider', {
+        type: 'fade',
+        heightRatio: 0.5,
+        pagination: false,
+        arrows: true,
+        cover: true,
+    });
+
+    var thumbnails = new Splide('#car-thumbnail-slider', {
+        fixedWidth: 100,
+        fixedHeight: 75,
+        isNavigation: true,
+        gap: 10,
+        focus: 'center',
+
+        pagination: false,
+        cover: true,
+        arrows: false,
+        breakpoints: {
+            600: {
+                fixedWidth: 66,
+                fixedHeight: 50,
+            },
+        },
+    });
+
+    main.sync(thumbnails);
+    main.mount();
+    thumbnails.mount();
+});
+
+
+
+
+
 // Video YouYube
 
 
