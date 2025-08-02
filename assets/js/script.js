@@ -48,6 +48,11 @@ document.addEventListener('DOMContentLoaded', function () {
         type: 'fade',
         heightRatio: 0.5,
         pagination: false,
+        autoplay: true,
+        interval: 4000,
+        rewind: true,
+        pauseOnHover: true,
+        pauseOnFocus: true,
         arrows: true,
         cover: true,
     });

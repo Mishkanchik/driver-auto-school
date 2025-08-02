@@ -1022,13 +1022,6 @@ body {
         height: 120px !important;
     }
 
-    .splide__arrow svg {
-        width: 1.2em;
-        height: 1.2em;
-
-        fill: #ffffff;
-    }
-
     #car-main-slider {
         margin-bottom: 10px;
     }
@@ -1058,6 +1051,13 @@ body {
 
     .car-main-slider .splide__arrow--next {
         right: 10px;
+    }
+
+    .splide__arrow svg {
+        width: 1.2em;
+        height: 1.2em;
+
+        fill: #ffffff;
     }
 
 }
