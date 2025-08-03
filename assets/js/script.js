@@ -196,3 +196,54 @@ document.querySelectorAll('#navmenu a[href^="#"]').forEach(link => {
     });
 });
 
+
+// reviews play video
+
+$('.reviews-video-slider').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    arrows: true,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        }
+    ]
+});
+
+document.querySelectorAll('.reviews-video-box').forEach(container => {
+    const videoId = container.getAttribute('data-video-id');
+    container.style.backgroundImage = `url('https://img.youtube.com/vi/${videoId}/hqdefault.jpg')`;
+});
+
+function reviewsPlayVideo(container) {
+    if (container.classList.contains('reviews-playing')) return;
+    container.classList.add('reviews-playing');
+
+    const videoId = container.getAttribute('data-video-id');
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+    iframe.title = 'YouTube video player';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    iframe.allowFullscreen = true;
+
+    container.innerHTML = '';
+    container.appendChild(iframe);
+}
+
+document.querySelectorAll('.reviews-video-box').forEach(box => {
+    box.addEventListener('click', () => reviewsPlayVideo(box));
+});
