@@ -39,7 +39,23 @@ function updateZIndexes(swiper) {
 
     swiper.slides[swiper.activeIndex].classList.add('is-active');
 }
+const swiperContainer = document.querySelector('.mySwiper');
 
+const swiperObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            swiper.autoplay.start();
+        } else {
+            swiper.autoplay.stop();
+        }
+    });
+}, {
+    threshold: 0.3 // 30% слайдера має бути видно
+});
+
+if (swiperContainer) {
+    swiperObserver.observe(swiperContainer);
+}
 
 // Car Slider
 
