@@ -904,6 +904,68 @@ iframe {
     }
 }
 
+
+/* footer */
+footer {
+    width: 100%;
+    min-height: 468px;
+    background-color: #100F1F;
+    color: #ffffff;
+
+}
+
+footer h3 {
+    font-size: 20px;
+    font-weight: 600;
+
+    margin-bottom: 25px;
+}
+
+footer p {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.footer-flex {
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.work-time {
+    margin-bottom: 50px;
+}
+
+.footer-number {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-number a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.contact-messenger a {
+    margin: 0px 10px 0px 10px;
+}
+
+.contact-messenger a img {
+    width: 40px;
+    height: 40px;
+}
+
+.location {
+    max-width: 495px;
+}
+
+
+
+
+
 /* ==== SCROLL TO TOP ==== */
 .scroll-top {
     position: fixed;
@@ -993,7 +1055,8 @@ iframe {
         top: 133px;
         left: 0;
         width: 100%;
-        background-color: #1c1b29;
+        background-color: rgba(16, 15, 31, 0.945);
+
         padding: 20px;
         z-index: 999;
     }
@@ -1259,6 +1322,10 @@ iframe {
         color: #000;
     }
 
+
+    .contact-messenger {
+        margin: 40px 0;
+    }
 
 
 }

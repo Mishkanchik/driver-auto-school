@@ -247,3 +247,21 @@ function reviewsPlayVideo(container) {
 document.querySelectorAll('.reviews-video-box').forEach(box => {
     box.addEventListener('click', () => reviewsPlayVideo(box));
 });
+
+
+
+// footer contact hover 
+
+document.querySelectorAll('.contact-messenger img').forEach(img => {
+    const originalSrc = img.src;
+    const hoverSrc = img.dataset.hover;
+
+    img.addEventListener('mouseenter', () => {
+        img.src = hoverSrc;
+    });
+
+    img.addEventListener('mouseleave', () => {
+        img.src = originalSrc;
+    });
+});
+
