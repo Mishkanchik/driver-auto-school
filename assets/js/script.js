@@ -201,10 +201,12 @@ document.querySelectorAll('#navmenu a[href^="#"]').forEach(link => {
 
 $('.reviews-video-slider').slick({
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 4,
+    autoplay: true,
+    autoplaySpeed: 3000,
     arrows: true,
     responsive: [
         {
