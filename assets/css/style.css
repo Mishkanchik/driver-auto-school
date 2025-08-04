@@ -487,16 +487,41 @@ body {
     -moz-box-shadow: 4px 8px 17px -7px rgba(0, 0, 0, 0.75);
 }
 
+.video-container h2 {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 330px;
+    background-color: #C341E0;
+    color: white;
+    z-index: 4;
+    padding: 10px;
+    text-align: center;
+    border-radius: 13px;
+    opacity: 1;
+    font-size: 25px;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
 .video-container::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(195, 65, 224, 0.45);
+    background: rgba(195, 65, 224, 0.274);
     border-radius: 20px;
     z-index: 3;
     transition: opacity 0.3s ease, z-index 0.3s ease;
     pointer-events: none;
     opacity: 1;
+}
+
+
+.video-container:hover h2,
+.video-container.playing h2 {
+    opacity: 0;
 }
 
 .video-container:hover::before,
@@ -556,7 +581,7 @@ body {
 
 
 #car-main-slider {
-    max-width: 1500px;
+    max-width: 1300px;
     margin: 0 auto 30px auto;
     box-shadow: 4px 8px 17px -7px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 4px 8px 17px -7px rgba(0, 0, 0, 0.75);
@@ -596,6 +621,11 @@ body {
 
 .car-thumbnail-slider .car-splide__slide:hover {
     opacity: 0.7;
+}
+
+.car-thumbnail-slider {
+    margin: 0 auto;
+    max-width: 1300px;
 }
 
 .car-thumbnail-slider .car-splide__slide.is-active {
@@ -1326,6 +1356,15 @@ footer p {
     .contact-messenger {
         margin: 40px 0;
     }
+
+    .video-container h2 {
+        top: 78%;
+        max-width: 200px;
+        font-size: 15px;
+
+    }
+
+
 
 
 }
