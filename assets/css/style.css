@@ -476,12 +476,9 @@ body {
     position: relative;
     width: 830px;
     height: 448px;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    cursor: pointer;
     border-radius: 20px;
     overflow: hidden;
+    cursor: pointer;
     box-shadow: 4px 8px 17px -7px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 4px 8px 17px -7px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 4px 8px 17px -7px rgba(0, 0, 0, 0.75);
@@ -568,6 +565,14 @@ body {
     flex-wrap: wrap;
     align-items: center;
     gap: 35px;
+}
+
+.image-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
 }
 
 

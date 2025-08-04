@@ -103,13 +103,6 @@ document.addEventListener('DOMContentLoaded', function () {
 // Video YouYube
 
 
-
-document.querySelectorAll('.video-container').forEach(container => {
-    const videoId = container.getAttribute('data-video-id');
-    console.log('videoId for container:', videoId);
-    container.style.backgroundImage = `url('https://img.youtube.com/vi/${videoId}/hqdefault.jpg')`;
-});
-
 function playVideo(container) {
     container.classList.add('playing');
 
