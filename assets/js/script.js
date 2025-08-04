@@ -235,10 +235,6 @@ $('.reviews-video-slider').slick({
     ]
 });
 
-document.querySelectorAll('.reviews-video-box').forEach(container => {
-    const videoId = container.getAttribute('data-video-id');
-    container.style.backgroundImage = `url('https://img.youtube.com/vi/${videoId}/hqdefault.jpg')`;
-});
 
 function reviewsPlayVideo(container) {
     if (container.classList.contains('reviews-playing')) return;
