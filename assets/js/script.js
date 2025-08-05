@@ -22,7 +22,7 @@ const swiper = new Swiper('.mySwiper', {
     longSwipesMs: 500,
     longSwipesRatio: 0.3,
     autoplay: {
-        delay: 4000,
+        delay: 2000,
         disableOnInteraction: false,
     },
     pagination: {

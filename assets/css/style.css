@@ -107,13 +107,13 @@ body {
 }
 
 .start-page-text h1 {
-    font-size: 2.2vw;
+    font-size: 33px;
     font-weight: 800;
     margin-bottom: 20px;
 }
 
 .start-page-text p {
-    font-size: 1.2vw;
+    font-size: 22px;
     ;
     margin: -4px 0;
     font-weight: 600;
@@ -122,7 +122,7 @@ body {
 /* ==== CALL TO ACTION ==== */
 .action-text h3 {
     margin-top: 35px;
-    font-size: 2.2vw;
+    font-size: 33px;
     font-weight: bold;
 }
 
@@ -197,6 +197,8 @@ body {
 }
 
 /* ==== SERVICES SECTION ==== */
+
+
 .services-section {
     margin: 100px 0;
 }
@@ -217,10 +219,10 @@ body {
 }
 
 .service-card {
-    background: #6B2CFF59;
+    background: #7C1593;
     border-radius: 25px;
     padding: 20px;
-    color: #000;
+    color: #ffffff;
     font-family: 'Arial', sans-serif;
     overflow: hidden;
     max-height: 115px;
@@ -267,11 +269,12 @@ body {
 }
 
 .card-body {
+    padding: 30px;
     opacity: 0;
     transition: opacity 0.7s ease 0.3s;
     pointer-events: none;
     margin-top: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 .service-card:hover .card-body {
@@ -281,6 +284,7 @@ body {
 
 .card-body p,
 .card-body ul li {
+
     font-size: 20px;
     font-weight: 600;
     line-height: 1.4;
@@ -288,7 +292,7 @@ body {
 }
 
 .card-body ul {
-    list-style: none;
+
     padding: 0;
     margin: 0;
 }
@@ -326,7 +330,16 @@ body {
 }
 
 .custom-btn-services {
-    margin-top: 30px;
+    background-color: #C341E0 !important;
+    margin: 35px;
+}
+
+
+
+.h3-card-block {
+    font-weight: 600;
+    margin: 40px 0 30px 0;
+
 }
 
 /* ==== MEET DRIVING SCHOOL ==== */
@@ -400,19 +413,19 @@ body {
 .swiper-pagination-bullet {
     width: 30px;
     height: 30px;
-    background: #C341E073;
+    background: #7c159371;
     opacity: 0.6;
     transition: 0.3s;
 }
 
 .swiper-pagination-bullet-active {
-    background: #c341e0;
+    background: #7C1593;
     opacity: 1;
     transform: scale(1.2);
 }
 
 .slide-info {
-    background-color: #c341e0;
+    background-color: #7C1593;
     border-radius: 28.8px;
     width: 353px;
     padding: 9.6px 0 19.2px 0;
@@ -448,7 +461,7 @@ body {
     top: 418px;
     left: 257px;
     z-index: 2;
-    background: #c341e0;
+    background: #7C1593;
     padding: 16px;
     border-radius: 100px;
     opacity: 0;
@@ -506,7 +519,8 @@ body {
     transform: translateX(-50%);
     width: 100%;
     max-width: 330px;
-    background-color: #C341E0;
+    background: linear-gradient(135deg, #7C1593, #753585);
+    ;
     color: white;
     z-index: 4;
     padding: 10px;
@@ -522,7 +536,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(195, 65, 224, 0.274);
+    background: rgba(124, 21, 147, 0.377);
     border-radius: 20px;
     z-index: 3;
     transition: opacity 0.3s ease, z-index 0.3s ease;
@@ -666,7 +680,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #c341e0;
+    background: #7C1593;
     border: none;
     width: 50px;
     height: 50px;
@@ -680,7 +694,7 @@ body {
 }
 
 .car-main-slider .splide__arrow:hover {
-    background: #7C1593;
+    background: #c341e0;
 }
 
 .car-main-slider .splide__arrow--prev {
@@ -769,7 +783,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(195, 65, 224, 0.45);
+    background: #7c159365;
     border-radius: 10px;
     z-index: 3;
     transition: opacity 0.3s ease, z-index 0.3s ease;
@@ -836,8 +850,8 @@ iframe {
 
 .slick-prev:before,
 .slick-next:before {
-    font-size: 45px;
-    color: #ff3399;
+    font-size: 50px;
+    color: #7C1593;
     opacity: 1;
 }
 
@@ -848,7 +862,7 @@ iframe {
 }
 
 .slick-dots li.slick-active button:before {
-    color: #ff3399;
+    color: #7C1593;
     font-size: 16px;
 }
 
@@ -1079,11 +1093,11 @@ footer p {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 6px solid #C341E0;
+    border: 6px solid #7C1593;
     border-top-color: transparent;
     border-right-color: transparent;
     animation: animate-preloader 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-    box-shadow: 0 0 10px #C341E0, 0 0 20px #C341E0;
+    box-shadow: 0 0 10px #7C1593, 0 0 20px #7C1593;
 }
 
 @keyframes animate-preloader {
@@ -1228,7 +1242,7 @@ footer p {
     }
 
     .custom-btn {
-        background-color: #C341E0;
+        background-color: #7C1593;
         color: #fff;
         width: 260px;
         height: 45px;
@@ -1244,21 +1258,31 @@ footer p {
     }
 
     .custom-btn:hover {
-        background-color: #7C1593;
+        background-color: #C341E0;
         color: #fff;
         text-decoration: none;
     }
 
     .custom-btn-services {
         margin-top: 30px;
+        background-color: #C341E0;
     }
 
+    .card-body {
+        padding: 20px;
+    }
+
+    .card-body p,
+    .card-body ul li {
+
+        font-size: 15px;
+    }
 
     .service-card {
-        background: #6B2CFF59;
+        background: #7C1593;
         border-radius: 25px;
         padding: 20px;
-        color: #000;
+        color: #fff;
         font-family: 'Arial', sans-serif;
         overflow: hidden;
         max-height: 90px;
@@ -1281,6 +1305,10 @@ footer p {
     }
 
     .card-header h3 {
+        font-size: 19px;
+    }
+
+    .h3-card-block {
         font-size: 19px;
     }
 
@@ -1370,7 +1398,7 @@ footer p {
         position: fixed;
         visibility: hidden;
         opacity: 0;
-        right: 10px;
+        right: 25px;
         bottom: 10px;
         z-index: 99999;
         background-color: #C341E0;
