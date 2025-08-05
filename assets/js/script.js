@@ -1,21 +1,4 @@
-video.addEventListener('loadeddata', () => {
-    if (video.currentTime !== 0) {
-        try { video.currentTime = 0; } catch { }
-    }
-    renderFirstFrame();
-});
 
-function renderFirstFrame() {
-    if (!video.videoWidth || !video.videoHeight) return;
-    const canvas = document.createElement('canvas');
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
-    const ctx = canvas.getContext('2d');
-    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-    const dataURL = canvas.toDataURL('image/jpeg', 0.8);
-    posterImg.src = dataURL;
-    posterImg.style.opacity = '1';
-}
 // Slider Teacher
 
 const swiper = new Swiper('.mySwiper', {
