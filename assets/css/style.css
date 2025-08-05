@@ -288,7 +288,7 @@ body {
 
 /* ==== BUTTONS ==== */
 .custom-btn {
-    background-color: #C341E0;
+    background-color: #7C1593;
     color: #fff;
     width: 360px;
     height: 75px;
@@ -307,7 +307,7 @@ body {
 }
 
 .custom-btn:hover {
-    background-color: #7C1593;
+    background-color: #C341E0;
     color: #fff;
     text-decoration: none;
 }
