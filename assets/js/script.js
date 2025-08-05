@@ -1,4 +1,14 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const video = document.getElementById('background-video');
 
+    // Спроба автоплею одразу
+    video.play().catch(() => {
+        // Якщо не вдалось — пробуємо ще раз після взаємодії з екраном
+        document.body.addEventListener('touchstart', () => {
+            video.play();
+        }, { once: true });
+    });
+});
 // Slider Teacher
 
 const swiper = new Swiper('.mySwiper', {
