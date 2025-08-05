@@ -9,7 +9,13 @@ body {
 
 .me-auto {
     margin-right: 0 !important;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+.location-start-page {
+    margin-top: 10px !important;
+    margin-left: 43px !important;
+    font-size: 15px !important;
 }
 
 .b-r {
@@ -26,7 +32,7 @@ body {
     width: 100%;
     background-color: #100F1F80;
     color: #fff;
-    height: 133px;
+    height: 100px;
     padding: 15px 0;
     z-index: 10;
 }
@@ -84,7 +90,7 @@ body {
 /* ==== TEXT ON START PAGE ==== */
 .start-page-text {
     position: absolute;
-    top: 57%;
+    top: 55%;
     left: 0;
     transform: translateY(-50%);
     color: white;
@@ -108,7 +114,7 @@ body {
 
 /* ==== CALL TO ACTION ==== */
 .action-text h3 {
-    margin-top: 58px;
+    margin-top: 35px;
     font-size: 33px;
     font-weight: bold;
 }
@@ -1091,6 +1097,21 @@ footer p {
 
 /* --- Медіа-запит --- */
 @media (max-width: 768px) {
+
+    .location-start-page {
+        margin-top: 20px !important;
+        font-size: 10px !important;
+    }
+
+    .me-auto {
+
+        margin-bottom: 2px;
+    }
+
+    .header {
+        height: 80px;
+    }
+
     .burger {
         display: block;
     }
@@ -1098,7 +1119,7 @@ footer p {
     .navmenu {
         display: none;
         position: absolute;
-        top: 133px;
+        top: 80px;
         left: 0;
         width: 100%;
         background-color: rgba(16, 15, 31, 0.945);
