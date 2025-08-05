@@ -125,15 +125,22 @@ const swiper = new Swiper('.mySwiper', {
 });
 
 function updateZIndexes(swiper) {
-    swiper.slides.forEach((slide, index) => {
-        const offset = Math.abs(swiper.activeIndex - index);
-
-        slide.style.zIndex = 100 - offset;
-
+    swiper.slides.forEach(slide => {
         slide.classList.remove('is-active');
-    });
 
-    swiper.slides[swiper.activeIndex].classList.add('is-active');
+        const classes = slide.classList;
+
+        if (classes.contains('swiper-slide-active')) {
+            slide.style.zIndex = 100;
+            slide.classList.add('is-active');
+        } else if (classes.contains('swiper-slide-prev')) {
+            slide.style.zIndex = 99;
+        } else if (classes.contains('swiper-slide-next')) {
+            slide.style.zIndex = 99;
+        } else {
+            slide.style.zIndex = 98;
+        }
+    });
 }
 const swiperContainer = document.querySelector('.mySwiper');
 
