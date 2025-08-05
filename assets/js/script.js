@@ -1,86 +1,13 @@
-(function () {
-    const video = document.getElementById('bg-video');
-    const canvas = document.getElementById('bg-canvas');
-    const ctx = canvas.getContext('2d', { alpha: false }); // швидше
 
-    // Підганяємо canvas під екран з урахуванням retina
-    function fitCanvas() {
-        const dpr = Math.max(1, Math.min(2, window.devicePixelRatio || 1)); // обмежимо до 2 для продуктивності
-        const w = Math.floor(window.innerWidth);
-        const h = Math.floor(window.innerHeight);
-        canvas.style.width = w + 'px';
-        canvas.style.height = h + 'px';
-        canvas.width = Math.floor(w * dpr);
-        canvas.height = Math.floor(h * dpr);
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    }
-    fitCanvas();
-    window.addEventListener('resize', fitCanvas);
-    window.addEventListener('orientationchange', () => setTimeout(fitCanvas, 200));
 
-    // Безкінечний рендер кадрів
-    function draw() {
-        if (!video.paused && !video.ended) {
-            // Заповнюємо екран, як object-fit: cover
-            const vw = video.videoWidth || 16;
-            const vh = video.videoHeight || 9;
-            const cw = canvas.clientWidth;
-            const ch = canvas.clientHeight;
-            const vr = vw / vh;
-            const cr = cw / ch;
-
-            let dw, dh, dx, dy;
-            if (cr > vr) {
-                // екран ширший — розтягуємо по ширині
-                dw = cw;
-                dh = cw / vr;
-                dx = 0;
-                dy = (ch - dh) / 2;
-            } else {
-                // екран вищий — розтягуємо по висоті
-                dh = ch;
-                dw = ch * vr;
-                dy = 0;
-                dx = (cw - dw) / 2;
-            }
-
-            ctx.drawImage(video, dx, dy, dw, dh);
-            requestAnimationFrame(draw);
-        } else {
-            requestAnimationFrame(draw);
-        }
-    }
-
-    // Страхуємо автоплей на iOS: muted+playsinline+короткий жест
-    function ensurePlay() {
-        const tryPlay = () => video.play().catch(() => { });
-        tryPlay();
-        // Якщо iOS все ж блокує — одинразовий тап
-        const kick = () => { tryPlay(); window.removeEventListener('touchstart', kick); };
-        window.addEventListener('touchstart', kick, { once: true, passive: true });
-    }
-
-    // Якщо вкладка ховалась — відновимо
-    document.addEventListener('visibilitychange', () => {
-        if (!document.hidden) video.play().catch(() => { });
+document.addEventListener('DOMContentLoaded', function () {
+    const video = document.getElementById('background-video');
+    video.play().catch(() => {
+        document.body.addEventListener('touchstart', () => {
+            video.play();
+        }, { once: true });
     });
-
-    video.addEventListener('play', draw, { once: true });
-    // Якщо відео коротке і є стрибок на початок — продовжуємо рендер
-    video.addEventListener('ended', () => video.play().catch(() => { }));
-
-    // Старт
-    ensurePlay();
-})();
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     const video = document.getElementById('background-video');
-//     video.play().catch(() => {
-//         document.body.addEventListener('touchstart', () => {
-//             video.play();
-//         }, { once: true });
-//     });
-// });
+});
 // Slider Teacher
 
 const swiper = new Swiper('.mySwiper', {
