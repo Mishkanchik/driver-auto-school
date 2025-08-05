@@ -39,21 +39,20 @@ const swiper = new Swiper('.mySwiper', {
 });
 
 function updateZIndexes(swiper) {
-    swiper.slides.forEach(slide => {
-        slide.classList.remove('is-active');
+    const activeIndex = swiper.activeIndex;
+    const slides = swiper.slides;
+    const totalSlides = slides.length;
 
-        const classes = slide.classList;
+    slides.forEach((slide, i) => {
 
-        if (classes.contains('swiper-slide-active')) {
-            slide.style.zIndex = 100;
-            slide.classList.add('is-active');
-        } else if (classes.contains('swiper-slide-prev')) {
-            slide.style.zIndex = 99;
-        } else if (classes.contains('swiper-slide-next')) {
-            slide.style.zIndex = 99;
-        } else {
-            slide.style.zIndex = 98;
-        }
+        let distance = Math.min(
+            Math.abs(i - activeIndex),
+            totalSlides - Math.abs(i - activeIndex)
+        );
+
+        slide.style.zIndex = 100 - distance;
+
+        slide.classList.toggle('is-active', distance === 0);
     });
 }
 const swiperContainer = document.querySelector('.mySwiper');
