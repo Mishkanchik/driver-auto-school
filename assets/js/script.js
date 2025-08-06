@@ -230,8 +230,8 @@ $('.reviews-video-slider').slick({
     slidesToShow: 4,
     slidesToScroll: 4,
     arrows: true,
-    draggable: false, // вимикає перетягування мишею
-    swipe: false,     // вимикає свайп на сенсорі
+    draggable: false,
+    swipe: false,
     responsive: [
         {
             breakpoint: 1024,
