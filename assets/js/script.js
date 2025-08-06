@@ -139,9 +139,9 @@ function playVideo(container) {
 // Preloader
 
 const preloader = document.querySelector('#preloader');
-console.log('preloader:', preloader);
+
 if (preloader) {
-    console.log('preloader found');
+
     window.addEventListener('load', () => {
         preloader.remove();
     });
