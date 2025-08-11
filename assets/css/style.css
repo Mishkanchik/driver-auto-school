@@ -213,7 +213,7 @@ body {
 }
 
 .service-card {
-    background: #7C1593;
+    background: #412F5E;
     border-radius: 25px;
     padding: 20px;
     color: #ffffff;
@@ -299,7 +299,7 @@ body {
 
 /* ==== BUTTONS ==== */
 .custom-btn {
-    background-color: #7C1593;
+    background-color: #412F5E;
     color: #fff;
     width: 360px;
     height: 75px;
@@ -407,19 +407,19 @@ body {
 .swiper-pagination-bullet {
     width: 30px;
     height: 30px;
-    background: #7c159371;
+    background: #412F5E71;
     opacity: 0.6;
     transition: 0.3s;
 }
 
 .swiper-pagination-bullet-active {
-    background: #7C1593;
+    background: #412F5E;
     opacity: 1;
     transform: scale(1.2);
 }
 
 .slide-info {
-    background-color: #7C1593;
+    background-color: #412F5E;
     border-radius: 28.8px;
     width: 353px;
     padding: 9.6px 0 19.2px 0;
@@ -455,7 +455,7 @@ body {
     top: 418px;
     left: 257px;
     z-index: 2;
-    background: #7C1593;
+    background: #412F5E;
     padding: 16px;
     border-radius: 100px;
     opacity: 0;
@@ -513,7 +513,7 @@ body {
     transform: translateX(-50%);
     width: 100%;
     max-width: 330px;
-    background: linear-gradient(135deg, #7C1593, #753585);
+    background: linear-gradient(135deg, #412F5E, #753585);
     ;
     color: white;
     z-index: 4;
@@ -617,7 +617,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    background: #7C1593;
+    background: #412F5E;
     color: #fff;
     font-size: 22px;
     line-height: 35px;
@@ -697,7 +697,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #7C1593;
+    background: #412F5E;
     border: none;
     width: 50px;
     height: 50px;
@@ -800,7 +800,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: #7c159365;
+    background: #412F5E65;
     border-radius: 10px;
     z-index: 3;
     transition: opacity 0.3s ease, z-index 0.3s ease;
@@ -868,7 +868,7 @@ iframe {
 .slick-prev:before,
 .slick-next:before {
     font-size: 50px;
-    color: #7C1593;
+    color: #412F5E;
     opacity: 1;
 }
 
@@ -879,7 +879,7 @@ iframe {
 }
 
 .slick-dots li.slick-active button:before {
-    color: #7C1593;
+    color: #412F5E;
     font-size: 16px;
 }
 
@@ -1110,11 +1110,11 @@ footer p {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 6px solid #7C1593;
+    border: 6px solid #412F5E;
     border-top-color: transparent;
     border-right-color: transparent;
     animation: animate-preloader 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-    box-shadow: 0 0 10px #7C1593, 0 0 20px #7C1593;
+    box-shadow: 0 0 10px #412F5E, 0 0 20px #412F5E;
 }
 
 @keyframes animate-preloader {
@@ -1255,7 +1255,7 @@ footer p {
     }
 
     .custom-btn {
-        background-color: #7C1593;
+        background-color: #412F5E;
         color: #fff;
         width: 260px;
         height: 45px;
@@ -1297,7 +1297,7 @@ footer p {
     }
 
     .service-card {
-        background: #7C1593;
+        background: #412F5E;
         border-radius: 25px;
         padding: 20px;
         color: #fff;
@@ -1341,7 +1341,7 @@ footer p {
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
-        background: #7C1593;
+        background: #412F5E;
         color: #fff;
         font-size: 13px;
         line-height: 15px;
